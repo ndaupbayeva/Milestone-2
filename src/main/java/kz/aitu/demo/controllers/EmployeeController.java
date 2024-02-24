@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping
 
-public class EmployeeRepository {
-    @GetMapping
+public class EmployeeController {
+    @GetMapping("employees")
     public String sayHello(){
         return "Hello World!";
     }
