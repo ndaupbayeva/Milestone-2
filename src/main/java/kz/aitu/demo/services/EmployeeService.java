@@ -6,6 +6,8 @@ import kz.aitu.demo.services.interfaces.EmployeeServiceInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class EmployeeService implements EmployeeServiceInterface {
 
@@ -21,9 +23,16 @@ public class EmployeeService implements EmployeeServiceInterface {
     }
 
     @Override
-    public Employee delete(Employee employee) {
-        return null;
+    public Employee deleteById(int id) {
+        Optional<Employee> employee = repo.findById(id);
+        if (employee.isPresent()) {
+            repo.deleteById(id);
+            return employee.get();
+        } else {
+            return null;
+        }
     }
+
 
     @Override
     public List<Employee> getAll() {
