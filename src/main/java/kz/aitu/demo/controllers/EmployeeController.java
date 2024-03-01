@@ -30,4 +30,15 @@ public class EmployeeController {
 
         return new ResponseEntity<>(createdEmployee, HttpStatus.CREATED);
     }
+
+    @DeleteMapping ("/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable int id){
+        Employee employee = service.deleteById(id);
+        if (employee == null)
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+
 }
