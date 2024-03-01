@@ -5,7 +5,7 @@ import kz.aitu.demo.models.Dish;
 import java.util.List;
 
 public interface DishServiceInterface {
-    Dish delete(Dish dish);
+    Dish deleteById(int id);
 
     List<Dish> getAll();
 
