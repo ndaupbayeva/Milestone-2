@@ -7,3 +7,6 @@ import java.util.List;
 
 public interface EmployeeRepositoryInterface extends JpaRepository<Employee, Integer> {
 }
+interface OrderServiceInterface extends JpaRepository<Employee, Integer> {
+
+}

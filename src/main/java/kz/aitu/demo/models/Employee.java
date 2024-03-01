@@ -1,5 +1,4 @@
 package kz.aitu.demo.models;
-
 import jakarta.persistence.*;
 import lombok.Data;
 @Data
@@ -11,7 +10,8 @@ public class Employee {
     private int id;
     private String name;
     private String surname;
+    private String position;
     private int age;
     private boolean gender;
-
 }
+
