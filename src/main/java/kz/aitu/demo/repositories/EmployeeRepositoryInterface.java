@@ -6,3 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface EmployeeRepositoryInterface extends JpaRepository<Employee, Integer> {
 
 }
+interface OrderServiceInterface extends JpaRepository<Employee, Integer> {
+
+}

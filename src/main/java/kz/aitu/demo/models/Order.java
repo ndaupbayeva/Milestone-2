@@ -1,5 +1,4 @@
 package kz.aitu.demo.models;
-
 import jakarta.persistence.*;
 import lombok.Data;
 @Data
