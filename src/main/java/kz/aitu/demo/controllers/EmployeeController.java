@@ -1,5 +1,6 @@
 package kz.aitu.demo.controllers;
 
+<<<<<<< HEAD
 import kz.aitu.demo.models.Employee;
 import kz.aitu.demo.services.interfaces.EmployeeServiceInterface;
 import org.apache.coyote.Response;
@@ -32,5 +33,18 @@ public class EmployeeController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 
         return new ResponseEntity<>(createdEmployee, HttpStatus.CREATED);
+=======
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping
+
+public class EmployeeController {
+    @GetMapping("employees")
+    public String sayHello(){
+        return "Hello World!";
+>>>>>>> origin/master
     }
 }
