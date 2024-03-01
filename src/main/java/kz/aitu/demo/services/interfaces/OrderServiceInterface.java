@@ -1,6 +1,7 @@
 package kz.aitu.demo.services.interfaces;
 
 import kz.aitu.demo.models.Employee;
+import kz.aitu.demo.models.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 
 public interface OrderServiceInterface extends JpaRepository<Employee, Integer> {
 
-    List<Employee> getAll();
+    List<Order> getAll();
 
-    Employee create(Employee employee);
+    Employee create(Order employee);
 }
