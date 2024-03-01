@@ -12,4 +12,5 @@ public class Dish {
     private String name;
     private int difficulty;
     private int cost;
+
 }
