@@ -1,15 +1,18 @@
 package kz.aitu.demo.models;
 
 import jakarta.persistence.*;
+import jakarta.persistence.*;
 import lombok.Data;
 @Data
 @Entity
-@Table(name="dishes")
-public class Dish {
+@Table(name="employees")
+
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private int difficulty;
-    private int cost;
-}
+    private String surname;
+    private String position;
+    private int age;
+    private boolean gender; }
