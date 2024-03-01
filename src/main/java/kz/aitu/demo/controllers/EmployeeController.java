@@ -1,7 +1,6 @@
 package kz.aitu.demo.controllers;
 import kz.aitu.demo.models.Employee;
 import kz.aitu.demo.services.interfaces.EmployeeServiceInterface;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +17,6 @@ public class EmployeeController {
     public EmployeeController(EmployeeServiceInterface service) {
         this.service = service;
     }
-
     @GetMapping("/")
     public List<Employee> getAll(){
         return service.getAll();
