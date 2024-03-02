@@ -2,11 +2,12 @@ package kz.aitu.demo.services;
 
 import kz.aitu.demo.models.Order;
 import kz.aitu.demo.repositories.OrderRepositoryInterface;
+import kz.aitu.demo.services.interfaces.OrderServiceInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class OrderService {
+public class OrderService implements OrderServiceInterface {
 
     private final OrderRepositoryInterface repo;
 
@@ -20,7 +21,7 @@ public class OrderService {
     }
 
     @Override
-    public Order delete(Order order) {
+    public Order deleteById(int id) {
         return null;
     }
 
